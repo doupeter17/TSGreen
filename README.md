@@ -39,5 +39,9 @@ Dataset is provided by Autonomous Greenhouse Challenge(AGC) 2019~2020 - 2nd Edit
    - Popular metrics: R2, MSE, RMSE.
 
 ## Current Progress:
-- In current progress, the experiment is already finished, but the project is not finished yet, I need to leverage my OOP knowledge to transfer from Jupiter notebook code to a framework that easy to use and scale.
+- In current progress, the experiment is already finished, but the project is not finished yet, I need to leverage my OOP knowledge to transfer from Jupiter notebook code to a framework that easy to use and scale. I have finished the OOP for Step 1, and continue, to observe the code, please check in directory **'Code/TSGreen.ipynb'**
+
+Author: 
+Duong Quang Thanh
+
 

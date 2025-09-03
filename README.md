@@ -1,4 +1,4 @@
-# 🌱 Greenhouse Energy Cost Consumption Prediction
+# TSGreen - AutoML Framework for Time-series in Smart Greenhouse
 
 **Objective**  
 Use data science and optimization techniques to:
@@ -15,25 +15,33 @@ Dataset is provided by Autonomous Greenhouse Challenge(AGC) 2019~2020 - 2nd Edit
 ## Project Flow
 
 1. **Data Ingestion & Cleaning**
-   - Read raw sensor data (greenhouse's climate data)
-   - Clean missing/extreme values, create feature-engineered time-series
-
+   - Read raw sensor data (greenhouse's sensors data) (already have missing data)
+   - Finding longest unmissing data range.
+   - Create artficial missing block.
+   - Auto handling missing data through collection of imputation methods.
+   - Evaluate methods using MAE, MSE or R2.
+   - Apply back to origin dataset.
+     
 2. **Exploratory Data Analysis**
    - Visualize relationships (e.g. energy vs. outside temp, humidity)
-   - Statistical correlation, trend detection.
-   - 
-3. **Exploratory Data Analysis**
-   - Visualize relationships (e.g. energy vs. outside temp, humidity)
-   - Statistical correlation, trend detection.
+   - Statistical correlation, trend, stationary detection using statistic test (KPSS, ADF)
+   - Finding relationship from multiple time-series using Granger Causality
+   
+3. **Feature Engineering**
+   - Feature Creation: Basic statistical features, datetime features, Differencing, Shifting.
+   - Feature Selection: Using feature important score from ML models.
 
 4. **Model Construction**
-   - **ML model**: MLP or tree-based/ensemble model (LightGBM/XGBoost/RandomForest) as a fallback or hybrid approach
-   - **DL model**: LSTM-D, GRU-D - popular model handle time-series data with missing values.
-
-4. **Forecasting**
-   - Ingest a day/week sensor behaviour/signal forecast (greenhouse's climate, sensor's activity)
-   - Use models to forecast daily/weekly resource consumption.
+   - ML Models: RandomForest, XGBoost, CatBoost
+   - Auto hypertuning
 
 5. **Estimation**
+   - Popular metrics: R2, MSE, RMSE.
+
+## Current Progress:
+- In current progress, the experiment is already finished, but the project is not finished yet, I need to leverage my OOP knowledge to transfer from Jupiter notebook code to a framework that easy to use and scale. I have finished the OOP for Step 1, and continue, to observe the code, please check in directory **'Code/TSGreen.ipynb'**
+
+Author: 
+Duong Quang Thanh
 
 
